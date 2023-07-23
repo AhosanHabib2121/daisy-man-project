@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,18 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom tailwind css here -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              'banner-image': "url('./images/yellow-bg.jpg')",
+            },
+          },
+        },
+      }
+    </script>
   </head>
   <body>
     <!-- header section here -->
@@ -60,9 +72,7 @@
             <div class="dropdown dropdown-end">
               <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                 <div class="w-10 rounded-full">
-                  <img
-                    src="./images/avatar.png"
-                  />
+                  <img src="./images/avatar.png" />
                 </div>
               </label>
               <ul
@@ -82,9 +92,103 @@
           </div>
         </div>
       </nav>
+      <!-- banner section here -->
+      <div class="hero min-h-[calc(100vh-66px)] bg-banner-image">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Welcome To DaisyMan</h1>
+            <p class="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button
+              class="btn bg-teal-50 hover:bg-teal-600 hover:border-teal-600 hover:text-white uppercase"
+            >
+              Shop now
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- main section here -->
-    <main></main>
+    <main class="max-w-7xl mx-auto px-5 lg:px-0">
+      <!-- collection section -->
+      <section class="py-20">
+        <h2 class="text-4xl text-purple-950 font-medium text-center">
+          Huge Collection
+        </h2>
+        <p class="text-center pt-2 text-sm">
+          Browse from a various collections
+        </p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- card-item1 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure>
+              <img
+                src="./images/shoes.avif"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn  bg-teal-50 hover:bg-teal-600 hover:border-teal-600 hover:text-white uppercase">Buy Now</button>
+              </div>
+            </div>
+          </div>
+            <!-- card-item2 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure>
+              <img
+                src="./images/hoodies.avif"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Clothes!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn  bg-teal-50 hover:bg-teal-600 hover:border-teal-600 hover:text-white uppercase">Buy Now</button>
+              </div>
+            </div>
+          </div>
+            <!-- card-item3 -->
+          <div class="card bg-base-100 shadow-xl image-full">
+            <figure>
+              <img
+                src="./images/perfume.avif"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Perfumes!</h2>
+              <p>At DaisyMan, we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.</p>
+              <div class="card-actions justify-end">
+                <button class="btn  bg-teal-50 hover:bg-teal-600 hover:border-teal-600 hover:text-white uppercase">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- feature section -->
+      <section class="py-20">
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+            <div class="flex-1">
+                <h3 class="text-4xl text-purple-950 font-normal mb-2">Easy Purchase</h3>
+                <p>
+                    we believe that style is a reflection of your unique personality and our mission is to provide you with a diverse and trendy collection.
+                    Our mission is to provide you with a diverse and trendy collection.
+                </p>
+            </div>
+            <div class="flex-1">
+                <img  src="./images/easy-purchase.avif" alt="not found">
+            </div>
+        </div>
+      </section>
+    </main>
     <!-- footer section here -->
     <footer></footer>
   </body>
